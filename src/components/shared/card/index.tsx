@@ -8,7 +8,7 @@ interface ICard {
 
 export default function Card({ children, title }: ICard) {
   return (
-    <div className="card">
+    <div className="user-type-card">
       <h2 className="text-white text-xl">{title}</h2>
       {children}
     </div>
