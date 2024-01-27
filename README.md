@@ -15,7 +15,7 @@ A GitHub Searcher app for searching repositories and users, built with:
 )
 
 ## Demo 🔻
-- Direct link [(link)](https://jzsssq-3000.csb.app/search)
+- Direct link [(link)](https://git-search-orcin.vercel.app/)
 - Sandbox link [(link)](https://codesandbox.io/p/github/BelalAtallah/git-search/main?file=%2F.codesandbox%2Ftasks.json&workspaceId=fa509c70-06f2-42db-8869-0e0bf5b8b76b)
 
 ## Features 🔻
