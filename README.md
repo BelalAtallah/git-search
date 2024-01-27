@@ -1,36 +1,45 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# GitHub Searcher ![github-searcher-actions-status](https://github.com/BelalAtallah/git-search/actions/workflows/github-actions-ci.yml/badge.svg)  ![Jest coverage](./badges/coverage-jest%20coverage.svg)
 
-First, run the development server:
+<p align="center">
+  <img src="./public/images/github-avatar.png" alt="Git-Search">
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A GitHub Searcher app for searching repositories and users, built with:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![nextjs](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+)![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+)![tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+)![jest](https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white
+)![github-actions](https://img.shields.io/badge/Github%20Actions-282a2e?style=for-the-badge&logo=githubactions&logoColor=367cfe
+)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features 🚀
+- [x] Select: you should be able to select search type between 'repositories' and 'users' and do a search based on this type.
+- [x]  Search: When a user enters a query and 'user' type is selected, it should be able to get a list of users matching this query.
+    - [x]  Show the user avatar, name and the link to his profile.
+- [x]  Search: When a user enters a query and 'repository' type is selected, it should be able to get a full list of public repositories matching this query.
+    - [x]  Filetype: Convert the filetypes of the files in the repository into a tag/badge, (e.g, if the returned repository has a list of files containing python and javascript files, the repository should have the respective tags/badges).
+    - [x]  Fork: Username/Avatar of the last 3 users who forked it with avatar linking to the fork.
+    - [x]  Any other additional information, you'd like to show.
+-  [x] Handle the empty/error/loading states.
+-  [x] Pagination: add the infinite scroll pagination.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Routes 🛣️ 
+- `'/'` - Home page [(Localhost Example)](http://localhost:3000/)
+- `'/search'` - Search page for searching repositories and users [(Localhost Example)](http://localhost:3000/search)
 
-## Learn More
+## Running The Project 👨🏻‍💻
+1. Install [NodeJS](https://nodejs.org/en)
+2. Open the project with your IDE of choice
+3. Rename the `.env.example` to `.env.local`
+4. Replace the `API_TOKEN=your_github_api_token` with your [GitHub API token]('https://github.com/settings/tokens')
+5. Install the dependencies `yarn install` or `npm install`
+6. Run the development server `npm run dev` or `yarn run dev`
+7. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Running Tests 🪲
+Run the `npm run test` command, it will give you a full **coverage** report.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
