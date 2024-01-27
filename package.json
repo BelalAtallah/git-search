@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "ci": "next lint && npm test"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",

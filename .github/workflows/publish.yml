@@ -28,12 +28,15 @@ jobs:
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
-      - name: Create "out" folder
-        run: mkdir -p out
-        
+      - name: Jest tests & lint
+        run: npm ci
+      - name: Generating coverage badges
+        uses: jpb06/jest-badges-action@latest
+        with:
+          coverage-summary-path: ./coverage/coverage-summary.json
+          branches: main
       - name: Build with Next.js 🏗️
         run: npx next build
-
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
