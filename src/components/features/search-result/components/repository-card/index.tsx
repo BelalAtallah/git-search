@@ -20,27 +20,27 @@ export const RepositoryCard = (
         </svg>
       </a>
       <div className="repository-card__profile-pic">
-        {owner && (
-          <Image
-            src={owner.avatar_url}
-            alt={`Repository ${full_name} logo`}
-            width={120}
-            height={120}
-            className="repository-card__profile-pic-img"
-          />
-        )}
+        <Image
+          src={owner?.avatar_url}
+          alt={`Repository ${full_name} logo`}
+          width={120}
+          height={120}
+          className="repository-card__profile-pic-img"
+        />
       </div>
       <div className="repository-card__bottom">
         <div className="repository-card__content">
           <span className="repository-card__full-name truncate">
             {full_name}
           </span>
-          <span className="repository-card__bio truncate">{description}</span>
+          <span className="repository-card__bio truncate text-gray-400">
+          {description?.length > 0 ? description : "This repo has no description"}
+          </span>
         </div>
         <div className="repository-card__bottom-bottom">
           <div className="repository-card__name truncate">{name}</div>
           <button
-          aria-label="view more"
+            aria-label="view more"
             onClick={() => handleViewMore(repo)}
             className="repository-card__button"
           >

@@ -34,7 +34,7 @@ export const RepositoryModal = ({
         <div className="flex items-center gap-2">
           {owner && (
             <Image
-              src={owner.avatar_url}
+              src={owner?.avatar_url}
               alt={`Repository ${full_name} logo`}
               width={80}
               height={80}
@@ -44,7 +44,7 @@ export const RepositoryModal = ({
           <div>
             <p className="text-white text-lg">{full_name}</p>
             <a href={owner?.html_url} className="text-blue-500">
-              @{owner.login}
+              @{owner?.login}
             </a>
           </div>
         </div>
@@ -53,14 +53,14 @@ export const RepositoryModal = ({
         </div>
       </div>
       <div className="text-gray-400 max-h-16 overflow-y-auto">
-        {description.length > 0 ? description : "This Repo has no description"}
+        {description?.length > 0 ? description : "This repo has no description"}
       </div>
 
       <RepositoryStats statistics={statistics} />
 
-      {languages.length > 0 && <RepositoryLanguages languages={languages} />}
+      {languages?.length > 0 && <RepositoryLanguages languages={languages} />}
 
-      {forks.length > 0 && <RepositoryForks forks={forks} />}
+      {forks?.length > 0 && <RepositoryForks forks={forks} />}
     </div>
   );
 };

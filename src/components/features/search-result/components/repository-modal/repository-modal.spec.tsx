@@ -85,7 +85,7 @@ describe("RepositoryModal Component", () => {
     render(<RepositoryModal {...mockRepo} description="" />);
 
     expect(
-      screen.getByText("This Repo has no description")
+      screen.getByText("This repo has no description")
     ).toBeInTheDocument();
   });
 });

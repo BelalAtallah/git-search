@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "@/store/store";
 import "@/styles/globals.css";
 import "@/styles/transitions.css";
+import ErrorBoundary from "./ErrorBoundary";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <RouteAnimation>
           <div className="flex items-center justify-center min-h-screen bg-slate-900 transition-all">
-            <Provider store={store}>{children}</Provider>
+            <ErrorBoundary>
+              <Provider store={store}>{children}</Provider>
+            </ErrorBoundary>
           </div>
         </RouteAnimation>
       </body>
