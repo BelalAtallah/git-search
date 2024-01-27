@@ -5,12 +5,19 @@ import Image from "next/image";
 export const RepositoryCard = (
   repo: IRepository & { handleViewMore: (repo: IRepository) => void }
 ) => {
-  const { full_name, owner, name, description, language, handleViewMore } =
-    repo;
+  const {
+    full_name,
+    owner,
+    name,
+    description,
+    language,
+    handleViewMore,
+    html_url,
+  } = repo;
   return (
     <div className="repository-card">
       {language && <div className="repository-card__badge">{language}</div>}
-      <a className="repository-card__link" href={owner?.html_url}>
+      <a className="repository-card__link" href={html_url}>
         <svg
           className="repository-card__link-svg"
           xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +41,9 @@ export const RepositoryCard = (
             {full_name}
           </span>
           <span className="repository-card__bio truncate text-gray-400">
-          {description?.length > 0 ? description : "This repo has no description"}
+            {description?.length > 0
+              ? description
+              : "This repo has no description"}
           </span>
         </div>
         <div className="repository-card__bottom-bottom">
