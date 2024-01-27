@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
+    "test": "jest --coverage  --coverageReporters='json-summary'",
     "test:watch": "jest --watch",
     "ci": "next lint && npm test"
   },
