@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: "/git-search",
+    basePath: "",
     env: {
         API_TOKEN: process.env.API_TOKEN,
     },
     images: {
-        domains: ['avatars.githubusercontent.com']
+      unoptimized: true,
+      domains: ['avatars.githubusercontent.com']
+
     }
 };
 
