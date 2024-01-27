@@ -30,7 +30,7 @@ export const SearchResultList = () => {
   };
 
   return (
-    <div className="flex flex-wrap sm:p-5 gap-y-2 pt-0 md:justify-center">
+    <div className="flex flex-wrap xl:gap-x-6 gap-x-0 sm:p-5 gap-y-2 pt-0 md:justify-center">
       <RepositoryList
         repositories={repositories}
         handleViewMore={handleViewMore}
@@ -62,7 +62,7 @@ const RepositoryList = ({
     <>
       {repositories?.map((e) => (
         <div
-          className="text-white xl:basis-1/3 md:basis-1/2 basis-full flex justify-center"
+          className="text-white 2xl:basis-1/5 xl:basis-1/3 md:basis-1/2 basis-full flex justify-center"
           key={e.id}
         >
           <RepositoryCard {...e} handleViewMore={handleViewMore} />
