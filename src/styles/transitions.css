@@ -1,0 +1,14 @@
+.transition-effect {
+  @apply z-10 overflow-hidden;
+}
+
+.transition-effect::after {
+  @apply h-full w-full fixed block inset-0;
+  content: "";
+  background: linear-gradient(
+    135deg,
+    hsla(0, 100%, 76%, 1) 0%,
+    hsla(237, 100%, 73%, 1) 100%
+  );
+  z-index: -1;
+}
