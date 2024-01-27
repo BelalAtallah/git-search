@@ -24,22 +24,25 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/setup-node
 
-      - name: Setup Pages ⚙️
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
+      # - name: Setup Pages ⚙️
+      #   uses: actions/configure-pages@v4
+      #   with:
+      #     static_site_generator: false
+
       - name: Jest tests & lint
         run: npm ci
+      
       - name: Generating coverage badges
         uses: jpb06/jest-badges-action@latest
         with:
           coverage-summary-path: ./coverage/coverage-summary.json
           branches: main
+      
       - name: Build with Next.js 🏗️
         run: npx next build
 
-      - name: List output directory
-        run: ls -l out
+      - name: List working directory contents
+        run: ls -la
         
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
