@@ -14,10 +14,11 @@ A GitHub Searcher app for searching repositories and users, built with:
 )![github-actions](https://img.shields.io/badge/Github%20Actions-282a2e?style=for-the-badge&logo=githubactions&logoColor=367cfe
 )
 
-## Demo 🖥️
+## Demo 🔻
 - Direct link [(link)](https://jzsssq-3000.csb.app/search)
 - Sandbox link [(link)](https://codesandbox.io/p/github/BelalAtallah/git-search/main?file=%2F.codesandbox%2Ftasks.json&workspaceId=fa509c70-06f2-42db-8869-0e0bf5b8b76b)
-## Features 🚀
+
+## Features 🔻
 - [x] Select: you should be able to select search type between 'repositories' and 'users' and do a search based on this type.
 - [x]  Search: When a user enters a query and 'user' type is selected, it should be able to get a list of users matching this query.
     - [x]  Show the user avatar, name and the link to his profile.
@@ -28,11 +29,11 @@ A GitHub Searcher app for searching repositories and users, built with:
 -  [x] Handle the empty/error/loading states.
 -  [x] Pagination: add the infinite scroll pagination.
 
-## Routes 🛣️ 
+## Routes 🔻
 - `'/'` - Home page [(Localhost Link)](http://localhost:3000/)
 - `'/search'` - Search page for searching repositories and users [(Localhost Link)](http://localhost:3000/search)
 
-## Running The Project 👨🏻‍💻
+## Running The Project 🔻
 1. Install [NodeJS](https://nodejs.org/en)
 2. Open the project with your IDE of choice
 3. Rename the `.env.example` to `.env.local`
@@ -41,7 +42,7 @@ A GitHub Searcher app for searching repositories and users, built with:
 6. Run the development server `npm run dev` or `yarn run dev`
 7. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-## Running Tests 🪲
+## Running Tests 🔻
 Run the `npm run test` command, it will give you a full **coverage** report.
 
 
