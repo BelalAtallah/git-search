@@ -1,6 +1,6 @@
 .modal {
     width: clamp(60%, 800px, 90%);
-    height: min(80%, 450px);
+    min-height: min(80%, 450px);
     margin: auto;
     padding: 0 2rem;
     border-radius: 12px;
