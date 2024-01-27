@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: "",
+    basePath: "/git-search",
     env: {
         API_TOKEN: process.env.API_TOKEN,
     },
