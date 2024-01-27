@@ -8,6 +8,7 @@ const selectRepositories = (state: RootState) => state.search.repoResults;
 const selectUsers = (state: RootState) => state.search.userResults;
 const selectPagination = (state: RootState) => state.search.pagination;
 const selectIsLoading = (state: RootState) => state.search.loading;
+const selectError = (state: RootState) => state.search.error;
 
 const useSearchSelector = () => {
   const selector = useMemo(() => (state: RootState) => ({
@@ -17,6 +18,7 @@ const useSearchSelector = () => {
     users: selectUsers(state),
     pagination: selectPagination(state),
     isApiLoading: selectIsLoading(state),
+    error: selectError(state)
   }), []);
 
   return useSelector(selector);

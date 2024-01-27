@@ -29,9 +29,9 @@ export const RepositoryModal = ({
     { label: "Watchers", value: watchers_count },
   ];
   return (
-    <div className="bg-slate-700 p-2 px-0 rounded-md flex flex-col gap-4 w-full m-2">
-      <div className="flex justify-between">
-        <div className="flex items-center gap-2">
+    <div className="bg-slate-700 p-2 px-0 rounded-md flex overflow-y-auto flex-col gap-4 w-full m-2">
+      <div className="flex justify-between flex-wrap gap-y-3">
+        <div className="flex items-center gap-2 flex-wrap">
           {owner && (
             <Image
               src={owner?.avatar_url}
@@ -42,7 +42,7 @@ export const RepositoryModal = ({
             />
           )}
           <div>
-            <p className="text-white text-lg">{full_name}</p>
+            <p className="text-white text-lg break-words">{full_name}</p>
             <a href={owner?.html_url} className="text-blue-500">
               @{owner?.login}
             </a>
@@ -52,7 +52,7 @@ export const RepositoryModal = ({
           <p className="text-white"> Created {formatDate(created_at)}</p>
         </div>
       </div>
-      <div className="text-gray-400 max-h-16 overflow-y-auto">
+      <div className="text-gray-400 max-h-16 md:overflow-y-auto ">
         {description?.length > 0 ? description : "This repo has no description"}
       </div>
 

@@ -11,7 +11,7 @@ export const Select = ({ value, onChange, options }: ISelectProps) => {
 
   return (
     <select
-      className="bg-transparent ring-0 outline-0 border-0 cursor-pointer text-base"
+      className="bg-transparent relative ring-0 outline-0 border-0 cursor-pointer text-base"
       value={value}
       onChange={onValueChange}
     >

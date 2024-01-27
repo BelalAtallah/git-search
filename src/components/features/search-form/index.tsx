@@ -45,7 +45,7 @@ export const SearchForm = () => {
   }, [debouncedValue, dispatch]);
 
   return (
-    <div className="items-center relative flex justify-center flex-wrap border p-4 bg-gray-100 text-black rounded-lg">
+    <div className="items-center relative flex justify-center border p-4 bg-gray-100 text-black rounded-lg">
       <div className={`absolute mix-blend-lighten transition-all duration-500 ${isTyping || value ? '-top-[96px]' : ' -top-12'}`}>
         <Image
           src="/github-avatar.png"

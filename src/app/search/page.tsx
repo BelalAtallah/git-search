@@ -27,7 +27,7 @@ const Search = () => {
   }, [dispatch, searchType, searchValue]);
 
   return (
-    <div className="items-center flex justify-center gap-4 flex-wrap p-4 text-black rounded-md w-full mx-20 flex-col bg-[#66667329] mt-3">
+    <div className="items-center flex justify-center gap-4 flex-wrap p-4 text-black rounded-md w-full lg:mx-20 md:mx-4 mx-1 flex-col bg-[#66667329] mt-3">
       <div className="flex border-b w-full mt-4 pb-2 justify-center">
         <SearchForm />
       </div>

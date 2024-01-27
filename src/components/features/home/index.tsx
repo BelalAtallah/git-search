@@ -18,7 +18,7 @@ export function Home() {
   };
 
   return (
-    <div className="items-center flex justify-center gap-8 flex-wrap">
+    <div className="items-center flex justify-center md:gap-3 gap-4 md:flex-row flex-col lg:gap-4 xl:gap-8 flex-wrap">
       <motion.div className="sticky group w-48">
         <a onClick={() => handleSearchTypeChange("users")}>
           <Card title={"Developer"}>
@@ -33,7 +33,9 @@ export function Home() {
           </Card>
         </a>
       </motion.div>
-      <p className="text-white text-xl">Or</p>
+      <div>
+        <p className="text-white text-xl">Or</p>
+      </div>
       <motion.div className="sticky group w-48">
         <a onClick={() => handleSearchTypeChange("repositories")}>
           <Card title={"Repository"}>
